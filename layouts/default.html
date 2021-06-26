@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-store="{{ store.id }}">
+    <head>
+        {{ html.charset() }}
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{ tray.meta }}
+        {{ tray.analytics }}
+        {{ googleTagManager.header(pages.current, tagManagerData) }}
+    </head>
+    <body>
+        {{ tray.scripts }}
+        {{ googleTagManager.top(pages.current, tagManagerData) }}
+        {{ content_for_layout }}
+        {{ googleTagManager.bottom(pages.current, tagManagerData) }}
+    </body>
+</html>
